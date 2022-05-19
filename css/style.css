@@ -363,7 +363,7 @@ textarea {
 
 
 @font-face {
-  font-family: 'TTTravels';
+  font-family: 'TTTravelsMedium';
   font-style: normal;
   font-weight: 500;
   src: url('../fonts/TTTravelsMedium.eot');
@@ -375,7 +375,7 @@ textarea {
 }
 
 @font-face {
-  font-family: 'TTTravels';
+  font-family: 'TTTravelsRegula';
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/TTTravelsRegular.eot');
@@ -394,7 +394,7 @@ html {
 }
 
 body {
-  font-family: 'TTTravels';
+  font-family: 'TTTravelsRegula';
   font-style: normal;
   font-size: 16px;
   line-height: 140%;
@@ -460,6 +460,7 @@ body {
   border: 0;
   outline: none;
   position: relative;
+  font-family: 'TTTravelsMedium';
   font-weight: 500;
   font-size: 14px;
   color: #fff;
@@ -473,6 +474,7 @@ body {
   border: 0;
   outline: none;
   position: relative;
+  font-family: 'TTTravelsMedium';
   font-weight: 500;
   font-size: 14px;
   color: #636C81;
@@ -503,6 +505,7 @@ body {
 
 .header-link {
   text-decoration: none;
+  font-family: 'TTTravelsMedium';
   font-weight: 500;
   color: #404040;
 }
@@ -545,6 +548,8 @@ body {
 }
 
 .header-phone-number {
+  font-family: 'TTTravelsMedium';
+  font-style: bold;
   font-weight: 500;
   font-size: 16px;
   color: #404040;
@@ -553,6 +558,7 @@ body {
 }
 
 .header-phone-daily {
+  font-family: 'TTTravelsMedium';
   font-weight: 500;
   font-size: 16px;
   color: #404040;
