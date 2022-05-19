@@ -515,7 +515,7 @@ body {
   color: #5A30F0;
 }
 
-/* Main content */
+/* Intro */
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -564,4 +564,34 @@ body {
   color: #404040;
   text-decoration: none;
   margin-left: 15px;
+}
+
+/* Order Cleaning */
+.order-cleaning {
+  display: flex;
+  justify-content: center;
+  margin-top: -29vh;
+}
+
+.order-button {
+  width: 195px;
+  height: 195px;
+  background: #5A30F0;
+  border-radius: 195px;
+  font-family: 'TTTravelsMedium';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  transform: rotate(-15deg);
+  transition: .2s;
+}
+
+.order-button:hover, .order-button:focus, .order-button:active {
+  transform: rotate(15deg);
 }
