@@ -16,3 +16,22 @@ function rightClick() {
   toggleBtnHome.style.color = '#636C81'
   toggleBtnOffice.style.color = '#fff'
 }
+
+// Header Start
+(function () {
+  const header = document.querySelector('.header');
+  const order = document.querySelector('.order-cleaning');
+  const button = document.querySelector('.order-button');
+
+  window.onscroll = () => {
+      if (window.pageYOffset > 150) {
+          header.classList.add('header_active');
+          order.classList.add('order-cleaning_active');
+          button.classList.add('order-button_active');
+      } else {
+          header.classList.remove('header_active');
+          order.classList.remove('order-cleaning_active');
+          button.classList.remove('order-button_active');
+      }
+  };
+}());
