@@ -9,9 +9,27 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="wrapper">
 
-  <h1>Уборка квартир в Киеве</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, assumenda non consequatur eum alias amet a aliquid fugit magni cupiditate distinctio praesentium quam atque consequuntur nobis minima obcaecati delectus. Quaerat?</p>
+      <!-- Header logo & switch -->
+      <div class="header-logo-switch">
+        <a href="/" class="header-logo-link">
+          <img src="./img/svg/cleaning-logo.svg" alt="Уборка квартир в Киеве" class="header-logo-pic">
+        </a>
+        <div class="switch-box">
+          <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" id="toggleBtnHome" onclick="leftClick()">Дом</button>
+            <button type="button" id="toggleBtnOffice" onclick="rightClick()">Офис</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
 
   <script src="js/main.js"></script>
 </body>
