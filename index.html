@@ -9,27 +9,65 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+
   <!-- Header -->
   <header class="header">
-    <div class="wrapper">
+    <div class="wrapper-full">
+      <div class="header-wrapper">
 
-      <!-- Header logo & switch -->
-      <div class="header-logo-switch">
-        <a href="/" class="header-logo-link">
-          <img src="./img/svg/cleaning-logo.svg" alt="Уборка квартир в Киеве" class="header-logo-pic">
-        </a>
-        <div class="switch-box">
-          <div class="button-box">
-            <div id="btn"></div>
-            <button type="button" id="toggleBtnHome" onclick="leftClick()">Дом</button>
-            <button type="button" id="toggleBtnOffice" onclick="rightClick()">Офис</button>
+        <!-- Header logo & switch -->
+        <div class="header-logo-switch">
+          <a href="/" class="header-logo-link">
+            <img src="./img/svg/cleaning-logo.svg" alt="Уборка квартир в Киеве" class="header-logo-pic">
+          </a>
+          <div class="switch-box">
+            <div class="button-box">
+              <div id="btn"></div>
+              <button type="button" id="toggleBtnHome" onclick="leftClick()">Дом</button>
+              <button type="button" id="toggleBtnOffice" onclick="rightClick()">Офис</button>
+            </div>
           </div>
         </div>
-      </div>
 
+        <!-- Header nav -->
+        <nav class="header-nav">
+          <ul class="header-list">
+            <li class="header-item">
+              <a href="#!" class="header-link">После ремонта</a>
+            </li>
+            <li class="header-item">
+              <a href="#!" class="header-link">Генеральная уборка</a>
+            </li>
+            <li class="header-item">
+              <a href="#!" class="header-link">Регулярная уборка</a>
+            </li>
+            <li class="header-item">
+              <a href="#!" class="header-link">Мойка окон</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-phone">
+          <a href="tel:+380674016977" class="header-phone-number">+380 67 401 69 77</a>
+          <span class="header-phone-daily">|</span><span class="header-phone-daily">24/7</span>
+        </div>
+
+      </div>
     </div>
   </header>
+
+  <!-- Main content -->
+  <main class="main">
+    <section class="intro">
+      <div class="intro-background"></div>
+      <div class="wrapper">
+        <div class="intro-items">
+          <h1 class="intro-title">Уборка квартир в Киеве</h1>
+          <p class="intro-item">Мы уберем у вас дома или в офисе. Наведем чистоту после ремонта и проведем генеральную уборку.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="js/main.js"></script>
 </body>

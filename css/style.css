@@ -393,20 +393,43 @@ html {
   box-sizing: inherit;
 }
 
-.wrapper {
-  max-width: 1320px;
-  margin: 0 auto;
+body {
+  font-family: 'TTTravels';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #404040;
 }
+
+.wrapper-full {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
 /* Header */
 .header {
-  display: flex;
-  align-items: center;
   height: 70px;
+  position: fixed;
+  width: 100%;
   left: 0px;
   top: 0px;
-  background: #fff;
-  box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.07);
+  /* background: #fff; */
+  /* box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.07); */
+}
+
+.header-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
 }
 
 /* Header logo & switch */
@@ -445,17 +468,17 @@ html {
 }
 
 #toggleBtnOffice {
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    outline: none;
-    position: relative;
-    font-weight: 500;
-    font-size: 14px;
-    color: #636C81;
-    text-align: center;
-    transition: .4s;
-  }
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  color: #636C81;
+  text-align: center;
+  transition: .4s;
+}
 
 #btn {
   left: 2px;
@@ -466,4 +489,73 @@ html {
   background: #5A30F0;
   border-radius: 34px;
   transition: .4s;
+}
+
+/* Header nav */
+.header-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-item {
+  margin-left: 32px;
+}
+
+.header-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #404040;
+}
+
+.header-link:hover, .header-link:focus, .header-link:active,
+.header-phone-number:hover, .header-phone-number:focus, .header-phone-number:active {
+  color: #5A30F0;
+}
+
+/* Main content */
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.intro-background {
+  height: 100vh;
+  width: 50vw;
+  background: url(../img/Intro-background-img.jpg) no-repeat center;
+  background-size: cover;
+
+}
+
+.intro-items {
+  max-width: 400px;
+  padding: 20px;
+}
+
+.intro-title {
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 110%;
+  margin-bottom: 30px;
+}
+
+.intro-item {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.header-phone-number {
+  font-weight: 500;
+  font-size: 16px;
+  color: #404040;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.header-phone-daily {
+  font-weight: 500;
+  font-size: 16px;
+  color: #404040;
+  text-decoration: none;
+  margin-left: 15px;
 }

@@ -16,4 +16,3 @@ function rightClick() {
   toggleBtnHome.style.color = '#636C81'
   toggleBtnOffice.style.color = '#fff'
 }
-
