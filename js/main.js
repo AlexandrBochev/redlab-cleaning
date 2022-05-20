@@ -24,14 +24,14 @@ function rightClick() {
   const button = document.querySelector('.order-button');
 
   window.onscroll = () => {
-      if (window.pageYOffset > 100) {
-          header.classList.add('header_active');
-          order.classList.add('order-cleaning_active');
-          button.classList.add('order-button_active');
-      } else {
-          header.classList.remove('header_active');
-          order.classList.remove('order-cleaning_active');
-          button.classList.remove('order-button_active');
-      }
+    if (window.pageYOffset > 100) {
+      header.classList.add('header_active');
+      order.classList.add('order-cleaning_active');
+      button.classList.add('order-button_active');
+    } else {
+      header.classList.remove('header_active');
+      order.classList.remove('order-cleaning_active');
+      button.classList.remove('order-button_active');
+    }
   };
 }());
