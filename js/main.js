@@ -1,7 +1,7 @@
 // Header logo & switch
-var btn = document.getElementById('btn')
-var toggleBtnHome = document.getElementById('toggleBtnHome')
-var toggleBtnOffice = document.getElementById('toggleBtnOffice')
+let btn = document.getElementById('btn')
+let toggleBtnHome = document.getElementById('toggleBtnHome')
+let toggleBtnOffice = document.getElementById('toggleBtnOffice')
 
 function leftClick() {
   btn.style.left = '2px'
@@ -24,7 +24,7 @@ function rightClick() {
   const button = document.querySelector('.order-button');
 
   window.onscroll = () => {
-      if (window.pageYOffset > 150) {
+      if (window.pageYOffset > 100) {
           header.classList.add('header_active');
           order.classList.add('order-cleaning_active');
           button.classList.add('order-button_active');

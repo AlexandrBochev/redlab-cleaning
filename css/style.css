@@ -396,10 +396,10 @@ html {
 body {
   font-family: 'TTTravelsRegula';
   font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 140%;
   color: #404040;
-  height: 2000px;
 }
 
 .wrapper-full {
@@ -422,6 +422,7 @@ body {
   left: 0px;
   top: 0px;
   transition: .4s;
+  z-index: 999;
 }
 
 .header_active {
@@ -554,8 +555,8 @@ body {
   
 .order-button {
   position: fixed;
-  width: 195px;
-  height: 195px;
+  width: 176px;
+  height: 176px;
   background: #5A30F0;
   border-radius: 195px;
   font-family: 'TTTravelsMedium';
@@ -577,6 +578,8 @@ body {
 }
   
 .order-button:hover {
+  width: 195px;
+  height: 195px;
   transform: rotate(0deg);
   font-size: 22px;
 }
@@ -586,6 +589,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 70px;
 }
 
 .intro-background {
@@ -611,4 +615,71 @@ body {
 .intro-item {
   font-weight: 400;
   font-size: 18px;
+}
+
+/* Benefits */
+.benefits-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.benefits-card {
+  display: flex;
+  position: relative;
+  width: 300px;
+  height: 328px;
+  background: #F3F6FB;
+  border-radius: 8px;
+  justify-content: center;
+  padding: 30px 30px 0 30px;
+  margin-bottom: 150px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.benefits-card-description {
+  position: absolute;
+  max-width: 240px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: .4s;
+}
+
+.benefits-card-title {
+  max-width: 230px;
+  font-family: 'TTTravelsMedium';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: center;
+  opacity: 1;
+  transition: .2s;
+}
+
+.benefits-card-img {
+  position: absolute;
+  bottom: 0;
+  opacity: 1;
+  transition: .2s;
+}
+
+.benefits-card:hover {
+  background: #5A30F0;
+}
+
+.benefits-card:hover .benefits-card-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.benefits-card:hover .benefits-card-title {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.benefits-card:hover .benefits-card-img {
+  opacity: 0;
 }
