@@ -409,7 +409,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1140px;
+    max-width: 1134px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -546,7 +546,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 62vh;
-  transition: .4s;
+  transition: .6s;
 }
 
 .order-cleaning_active {
@@ -570,7 +570,7 @@ body {
   color: #fff;
   border: none;
   transform: rotate(-20deg);
-  transition: .4s;
+  transition: .2s;
 }
 
 .order-button_active {
@@ -682,4 +682,27 @@ body {
 
 .benefits-card:hover .benefits-card-img {
   opacity: 0;
+}
+
+/* How do we clean */
+.howDoWeClean-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.howDoWeClean-title {
+  font-size: 44px;
+  line-height: 120%;
+}
+
+.howDoWeClean-description {
+  max-width: 414px;
+  font-size: 18px;
+}
+
+.howDoWeClean-kitchen-img {
+  margin-bottom: 150px;
 }
