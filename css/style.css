@@ -421,15 +421,19 @@ body {
   width: 100%;
   left: 0px;
   top: 0px;
+  opacity: 1;
   transition: .4s;
   z-index: 999;
-  opacity: 0;
 }
 
 .header_active {
   background: #fff;
   box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.07);
 
+}
+
+.header_active-2 {
+  transform: translateY(-80px);
 }
 
 .header-wrapper {
@@ -543,20 +547,85 @@ body {
 }
   
 /* Order Cleaning */
-.order-cleaning {
-  position: relative;
+.order-hover {
   display: flex;
   justify-content: center;
-  margin-top: 62vh;
-  transition: .6s;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 62vh auto 0 auto;
+  /* border: 1px solid #636C81; */
+  cursor: pointer;
+  transition: all .4s ease-out;
 }
-  
-.order-button {
-  position: absolute;
-  width: 195px;
-  height: 195px;
+
+.order-hover_active {
+  width: 176px;
+  height: 176px;
+  margin: 76vh auto 0 auto;
+}
+
+.order-hover_active-2 {
+  transform: scale(0);
+  margin: 92vh auto 0 auto;
+}
+
+.order-hover:hover {
+  margin: 32vh auto 0 auto;
+}
+
+.order-hover:hover [class^="cursor"] {
+  position: fixed;
+}
+
+.cursor-radius {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* border: 1px solid #636C81; */
+  transition: all .1s ease-out;
+}
+
+.cursor-radius:hover {
+  width: 400px;
+  height: 400px;
+}
+
+.cursor-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   background: #5A30F0;
-  border-radius: 195px;
+  transition: .2s;
+}
+
+.cursor-bg_active {
+  width: 176px;
+  height: 176px;
+}
+
+.cursor-bg:hover {
+  width: 200px;
+  height: 200px;
+}
+
+.cursor-bg:hover .cursor-text {
+  font-size: 18px;
+  transform: rotate(0);
+}
+
+
+.cursor-text {
+  width: 120px;
   font-family: 'TTTravelsMedium';
   font-weight: 500;
   font-size: 18px;
@@ -564,33 +633,19 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  text-decoration: none;
   color: #fff;
-  border: none;
   transform: rotate(-20deg);
-  transition: .6s;
+  transition: all .18s ease-out;
 }
 
-.order-cleaning:hover {
-  margin-top: 62vh;
-}
-
-.order-button:hover {
-  width: 196px;
-  height: 196px;
-  transform: rotate(0deg);
+.cursor-text:hover {
   font-size: 18px;
+  transform: rotate(0);
 }
 
-.order-cleaning_active {
-  margin-top: 76vh;
-}
-
-.order-button_active {
-  width: 170px;
-  height: 170px;
+.cursor-text_active {
+  font-size: 14px;
   transform: rotate(20deg);
-  font-size: 16px;
 }
 
 /* Intro */
@@ -634,6 +689,35 @@ body {
   justify-content: space-between;
 }
 
+.cadr-1 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all .4s ease .0s;
+}
+
+.cadr-2 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all .4s ease .2s;
+}
+
+.cadr-3 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all .4s ease .4s;
+}
+
+.cadr-4 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all .4s ease .6s;
+}
+
+.cadr-1._active, .cadr-2._active, .cadr-3._active, .cadr-4._active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .benefits-card {
   display: flex;
   position: relative;
@@ -644,7 +728,6 @@ body {
   justify-content: center;
   padding: 30px 30px 0 30px;
   margin-bottom: 150px;
-  cursor: pointer;
   transition: .4s;
 }
 
@@ -696,15 +779,21 @@ body {
 /* How do we clean */
 .howDoWeClean {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
-/* .howDoWeClean-heading {
+.howDoWeClean-heading {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 50px;
+  transition: all .4s ease .2s;
+}
+
+.howDoWeClean-heading_active-2 {
+  transform: translateY(-100px);
+  opacity: 0;
 }
 
 .howDoWeClean-title {
@@ -717,16 +806,20 @@ body {
   font-size: 18px;
 }
 
-.howDoWeClean-kitchen-img {
-  border-radius: 8px;
-  margin-bottom: 150px;
-} */
-
 .sidebar {
+  position: absolute;
   width: 375px;
   height: 100vh;
   background: #5A30F0;
-  padding: 40px 0 0 40px; 
+  padding: 40px 0 0 40px;
+  transform: translateX(-375px);
+  z-index: 0;
+  transition: .4s;
+}
+
+.sidebar_active-2 {
+  transform: translateX(0);
+  position: relative;
 }
 
 .sidebar-title {
@@ -756,7 +849,18 @@ body {
   transition: .2s;
 }
 
-.sidebar-link:active, .sidebar-link:focus {
+.sidebar-link:focus {
+  opacity: .7;
+  transform: translateX(0);
+  font-style: italic;
+}
+
+.sidebar-link:focus .arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sidebar-link:active {
   opacity: 1;
   transform: translateX(0);
   font-style: italic;
@@ -767,16 +871,104 @@ body {
   font-style: italic;
 }
 
-.sidebar-link:active, .sidebar-link:focus .arrow {
-  opacity: 1;
-  transform: translateX(0);
+.howDoWeClean-slide-1 {
+  position: absolute;
 }
 
-.howDoWeClean-background {
-  height: 100vh;
-  width: 100%;
-  background: url(../img/kitchen-img.jpg) no-repeat center;
+.howDoWeClean-kitchen-img {
+  width: 1049px;
+  margin: 0 auto;
+  border-radius: 8px;
+  transition: .8s;
+}
+
+.howDoWeClean-kitchen-img_active-2 {
   background-size: cover;
+  margin: 0;
+  height: 100vh;
+  /* width: 100%; */
+  border-radius: 0;
 }
 
+.tooltip-icons {
+  transform: scale(0);
+}
 
+.icon-1 {
+  position: absolute;
+  display: inline-block;
+  margin-top: 240px;
+  margin-left: 440px;
+}
+
+.icon-2 {
+  position: absolute;
+  display: inline-block;
+  margin-top: 350px;
+  margin-left: 800px;
+}
+
+.icon-3 {
+  position: absolute;
+  display: inline-block;
+  margin-top: 440px;
+  margin-left: 400px;
+}
+
+.icon-4 {
+  position: absolute;
+  display: inline-block;
+  margin-top: 480px;
+  margin-left: 620px;
+}
+
+.icon-5 {
+  position: absolute;
+  display: inline-block;
+  margin-top: 490px;
+  margin-left: 1000px;
+}
+
+.icon-6 {
+  position: absolute;
+  display: inline-block;
+  margin-top: 580px;
+  margin-left: 740px;
+}
+
+.icon-7 {
+  position: absolute;
+  display: inline-block;
+  margin-top: 700px;
+  margin-left: 460px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #fff;
+  color: #636C81;
+  text-align: center;
+  border-radius: 2px;
+  padding: 8px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 60px;
+  left: -25px;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
