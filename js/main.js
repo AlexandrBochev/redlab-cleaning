@@ -25,7 +25,6 @@ function rightClick() {
   const button = document.querySelector('.cursor-text');
   const owDoWeCleanHeading = document.querySelector('.howDoWeClean-heading');
   const sidebar = document.querySelector('.sidebar');
-  const howDoWeCleankitchen = document.querySelector('.howDoWeClean-kitchen-img');
 
   window.onscroll = () => {
     if (window.pageYOffset > 100) {
@@ -40,18 +39,16 @@ function rightClick() {
       button.classList.remove('cursor-text_active');
     }
 
-    if (window.pageYOffset > 1290) {
+    if (window.pageYOffset > 600) {
       header.classList.add('header_active-2');
       order.classList.add('order-hover_active-2');
       owDoWeCleanHeading.classList.add('howDoWeClean-heading_active-2');
       sidebar.classList.add('sidebar_active-2');
-      howDoWeCleankitchen.classList.add('howDoWeClean-kitchen-img_active-2');
     } else {
       header.classList.remove('header_active-2');
       order.classList.remove('order-hover_active-2');
       owDoWeCleanHeading.classList.remove('howDoWeClean-heading_active-2');
       sidebar.classList.remove('sidebar_active-2');
-      howDoWeCleankitchen.classList.remove('howDoWeClean-kitchen-img_active-2');
     }
   };
 }());
@@ -111,8 +108,39 @@ document.addEventListener('mousemove', e => {
   cursorRadius.style.left = (e.clientX - 200) + 'px';
 })
 
+// Sidebar
+const kitchen = document.querySelector('.kitchen');
+const room = document.querySelector('.room');
+const bathroom = document.querySelector('.bathroom');
+const hallway = document.querySelector('.hallway');
+
+const howDoWeCleanKitchen = document.querySelector('.howDoWeClean-kitchen');
+const howDoWeCleanBathroom = document.querySelector('.howDoWeClean-bathroom');
+
+kitchen.addEventListener('mouseenter', () => {
+  howDoWeCleanKitchen.style.width = '100%';
+  howDoWeCleanBathroom.style.width = '0%';
+  howDoWeCleanKitchen.style.zIndex = '2';
+});
+
+kitchen.addEventListener('mouseleave', () => {
+  howDoWeCleanKitchen.style.zIndex = '1';
+});
 
 
+// kitchen.addEventListener('click', () => 
+// howDoWeCleanKitchen.style.width = '100%');
+
+
+bathroom.addEventListener('mouseenter', () => {
+  howDoWeCleanBathroom.style.width = '100%';
+  howDoWeCleanKitchen.style.width = '0%';
+  howDoWeCleanBathroom.style.zIndex = '2';
+});
+  
+kitchen.addEventListener('mouseleave', () => {
+  howDoWeCleanBathroom.style.zIndex = '1';
+});
 
 
 

@@ -605,7 +605,7 @@ body {
   height: 200px;
   border-radius: 50%;
   background: #5A30F0;
-  transition: .2s;
+  transition: .1s;
 }
 
 .cursor-bg_active {
@@ -635,7 +635,7 @@ body {
   letter-spacing: 0.03em;
   color: #fff;
   transform: rotate(-20deg);
-  transition: all .18s ease-out;
+  transition: all .05s ease-out;
 }
 
 .cursor-text:hover {
@@ -807,20 +807,20 @@ body {
 }
 
 .sidebar {
-  position: absolute;
+  /* position: absolute; */
   width: 375px;
   height: 100vh;
   background: #5A30F0;
   padding: 40px 0 0 40px;
-  transform: translateX(-375px);
+  /* transform: translateX(-375px); */
   z-index: 0;
-  transition: .4s;
+  transition: .8s ease-out;
 }
 
-.sidebar_active-2 {
+/* .sidebar_active-2 {
   transform: translateX(0);
   position: relative;
-}
+} */
 
 .sidebar-title {
   font-family: 'TTTravelsMedium';
@@ -870,24 +870,44 @@ body {
   opacity: 1;
   font-style: italic;
 }
-
-.howDoWeClean-slide-1 {
+.howDoWeClean-tooltip {
   position: absolute;
 }
 
-.howDoWeClean-kitchen-img {
-  width: 1049px;
-  margin: 0 auto;
-  border-radius: 8px;
-  transition: .8s;
+.howDoWeClean-slids {
+  /* position: relative; */
+  display: flex;
+  justify-content: end;
 }
 
-.howDoWeClean-kitchen-img_active-2 {
-  background-size: cover;
-  margin: 0;
+.howDoWeClean-kitchen {
+  /* position: absolute; */
+  width: 100%;
   height: 100vh;
-  /* width: 100%; */
+  object-fit: cover;
+  object-position: right;
+  z-index: 0;
+  transition: .8s ease-out;
+}
+
+/* .howDoWeClean-kitchen_active-2 {
+  position: relative;
+  width: 0%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: left;
+  z-index: 2;
   border-radius: 0;
+} */
+
+.howDoWeClean-bathroom {
+  /* position: absolute; */
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: right;
+  z-index: 0;
+  transition: .8s ease-out;
 }
 
 .tooltip-icons {
