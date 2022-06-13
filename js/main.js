@@ -104,15 +104,15 @@ document.addEventListener('mousemove', e => {
   cursorText.style.top = (e.clientY - 20) + 'px';
   cursorText.style.left = (e.clientX - 60) + 'px';
 
-  cursorRadius.style.top = (e.clientY - 200) + 'px';
-  cursorRadius.style.left = (e.clientX - 200) + 'px';
+  cursorRadius.style.top = (e.clientY - 300) + 'px';
+  cursorRadius.style.left = (e.clientX - 300) + 'px';
 })
 
 // Sidebar
 const kitchen = document.querySelector('.kitchen');
-const room = document.querySelector('.room');
+// const room = document.querySelector('.room');
 const bathroom = document.querySelector('.bathroom');
-const hallway = document.querySelector('.hallway');
+// const hallway = document.querySelector('.hallway');
 
 const howDoWeCleanKitchen = document.querySelector('.howDoWeClean-kitchen');
 const howDoWeCleanBathroom = document.querySelector('.howDoWeClean-bathroom');

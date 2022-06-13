@@ -409,10 +409,10 @@ body {
 }
 
 .wrapper {
-    max-width: 1134px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+  max-width: 1134px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 /* Header */
 .header {
@@ -593,8 +593,8 @@ body {
 }
 
 .cursor-radius:hover {
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
 }
 
 .cursor-bg {
@@ -689,31 +689,31 @@ body {
   justify-content: space-between;
 }
 
-.cadr-1 {
+.card-1 {
   opacity: 0;
   transform: translateY(100px);
   transition: all .4s ease .0s;
 }
 
-.cadr-2 {
+.card-2 {
   opacity: 0;
   transform: translateY(100px);
   transition: all .4s ease .2s;
 }
 
-.cadr-3 {
+.card-3 {
   opacity: 0;
   transform: translateY(100px);
   transition: all .4s ease .4s;
 }
 
-.cadr-4 {
+.card-4 {
   opacity: 0;
   transform: translateY(100px);
   transition: all .4s ease .6s;
 }
 
-.cadr-1._active, .cadr-2._active, .cadr-3._active, .cadr-4._active {
+.card-1._active, .card-2._active, .card-3._active, .card-4._active {
   opacity: 1;
   transform: translateY(0);
 }
@@ -817,10 +817,10 @@ body {
   transition: .8s ease-out;
 }
 
-/* .sidebar_active-2 {
+.sidebar_active-2 {
   transform: translateX(0);
   position: relative;
-} */
+}
 
 .sidebar-title {
   font-family: 'TTTravelsMedium';
@@ -890,7 +890,7 @@ body {
   transition: .8s ease-out;
 }
 
-/* .howDoWeClean-kitchen_active-2 {
+.howDoWeClean-kitchen_active-2 {
   position: relative;
   width: 0%;
   height: 100vh;
@@ -898,7 +898,7 @@ body {
   object-position: left;
   z-index: 2;
   border-radius: 0;
-} */
+}
 
 .howDoWeClean-bathroom {
   /* position: absolute; */
@@ -992,3 +992,12 @@ body {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+/* .check-point {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 100%;
+  background-color: #404040;
+} */
